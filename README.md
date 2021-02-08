@@ -3,6 +3,13 @@
 
 ## Лабораторный пректикум №6 (StaffDemo)
 
+![GitHub pull requests](https://img.shields.io/github/issues-pr/HSE-CS/tp-lab-6)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/HSE-CS/tp-lab-6)
+
+![Relative date](https://img.shields.io/date/1614545999)
+
+
+
 Разработать иерархию классов в соответствии со следующей диаграммой:
 
 <img src="img/staff.png">
