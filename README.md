@@ -1,7 +1,7 @@
 
 # Lab-6
 
-## Лабораторный пректикум №6 (StaffDemo)
+## Лабораторный практикум №6 (StaffDemo)
 
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/HSE-CS/tp-lab-6)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/HSE-CS/tp-lab-6)
