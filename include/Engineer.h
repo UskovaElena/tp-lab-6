@@ -1,0 +1,48 @@
+// Copyright 2020 Uskova
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
+
+#include "Project.h"
+#include "Employee.h"
+#include "Personal.h"
+#include "Interfaces.h"
+
+class Engineer : public Personal, public ProjectBudget {
+ protected:
+    Project* project;
+ public:
+    Engineer(int, std::string, Position, int);
+    int calcBudgetPart(float, int) override;
+    void calc() override;
+    void setProject(Project* pr);
+    std::string getProjectName();
+    int calcBonus() override;
+};
+
+class Programmer : public Engineer {
+ private:
+   int coeff;
+ public:
+    Programmer(int, std::string, Position, int, int);
+    void printinfo() override;
+    int calcProAdditions() override;
+};
+
+class Tester : public Engineer {
+ private:
+  int numFoundMistakes;
+ public:
+    Tester(int, std::string, Position, int, int);
+    void printinfo() override;
+    int calcProAdditions() override;
+};
+
+class TeamLeader :public Programmer, public Heading {
+ public:
+    TeamLeader(int, std::string, Position, int);
+    int calcHeads() override;
+    void calc() override;
+    void printinfo() override;
+};
+
+#endif  // INCLUDE_ENGINEER_H_
