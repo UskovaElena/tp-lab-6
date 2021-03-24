@@ -2,15 +2,20 @@
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
-#include <vector>
-#include "Employee.h"
-#include "Personal.h"
-#include "Manager.h"
-#include "Engineer.h"
-#include <fstream>
 #include <cstdlib>
+#include <fstream>
 #include <iostream>
+#include <vector>
 
-std::vector<Employee*> readWorkers(std::string file);
+#include "Employee.h"
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
+
+class Employee;       //mb ne nado
+class Project;
+
+std::vector<Employee*> readWorkers(std::string file, Project* proj);
+Employee* apdate(Employee* worker, Project* proj);
 
 #endif  // INCLUDE_FACTORY_H_

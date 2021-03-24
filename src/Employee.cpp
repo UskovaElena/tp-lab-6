@@ -3,11 +3,11 @@
 #include "Employee.h"
 
 Employee::Employee(int id, std::string name, Position position, int worktime) {
-    this->id = id;
-    this->name = name;
-    this->position = position;
-    this->worktime = worktime;
-    this->payment = 0;
+  this->id = id;
+  this->name = name;
+  this->position = position;
+  this->worktime = worktime;
+  this->payment = 0;
 }
 
 Employee::Employee(int id, std::string name, Position position) {
@@ -43,30 +43,30 @@ void Employee::setWorkTime(int time) {
 }
 
 std::string Employee::getStrPosition() {
-    switch (this->position) {
-        case Position::Tester:
-            return "Tester";
-            break;
-        case Position::Programmer:
-          return "Programmer";
-          break;
-        case Position::TeamLeader:
-          return "TeamLeader";
-          break;
-        case Position::SeniorManager:
-          return "SeniorManager";
-          break;
-        case Position::ProjectManager:
-          return "ProjectManager";
-          break;
-        case Position::Driver:
-          return "Driver";
-          break;
-        case Position::Cleaner:
-          return "Cleaner";
-          break;
-        default:
-          return "Is not a worker";
-          break;
-    }
+  switch (this->position) {
+    case Position::Tester:
+      return "Tester";
+      break;
+    case Position::Programmer:
+      return "Programmer";
+      break;
+    case Position::TeamLeader:
+      return "TeamLeader";
+      break;
+    case Position::SeniorManager:
+      return "SeniorManager";
+      break;
+    case Position::ProjectManager:
+      return "ProjectManager";
+      break;
+    case Position::Driver:
+      return "Driver";
+      break;
+    case Position::Cleaner:
+      return "Cleaner";
+      break;
+    default:
+      return "Is not a worker";
+      break;
+  }
 }

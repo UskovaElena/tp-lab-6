@@ -2,37 +2,23 @@
 
 #include "Personal.h"
 
-Personal::Personal(int id, std::string name, Position pos, int wtime)
+Personal::Personal(int id, std::string name, Position pos, int wtime,
+                   int salary)
     : Employee(id, name, pos, wtime) {
-    this->salary = 0;
-    this->id = id;
-    this->name = name;
-    this->position = pos;
-    this->payment = 0;
-    this->worktime = wtime;
-}
-
-void Personal::setSalary(int salary) {
-    this->salary = salary;
+  this->salary = salary;
+  this->payment = 0;
 }
 
 int Personal::calcBase(int salary, int wtime) {
     return salary * wtime;
 }
 
-Driver::Driver(int id, std::string name, Position pos, int wtime)
-    : Personal(id, name, pos, wtime) {
+Driver::Driver(int id, std::string name, Position pos, int wtime, int salary,
+               int time)
+    : Personal(id, name, pos, wtime, salary) {
   this->extraTime = 0;
-  this->id = id;
-  this->name = name;
-  this->position = pos;
   this->payment = 0;
-  this->worktime = wtime;
-  this->salary = 0;
-}
-
-void Driver::setExtraTime(int time) {
-    this->extraTime = time;
+  this->extraTime = time;
 }
 
 int Driver::calcBonus() {
@@ -40,31 +26,28 @@ int Driver::calcBonus() {
 }
 
 void Driver::calc() {
-    this->payment = (calcBase(this->salary, this->worktime) + calcBonus());
+  this->payment = (calcBase(this->salary, this->worktime) + calcBonus());
 }
 
 void Driver::printinfo() {
-    std::cout << "Name: " << this->name << std::endl;
-    std::cout << "Id: " << this->id << std::endl;
-    std::cout << "Position: " << getStrPosition() << std::endl;
-    std::cout << "Main worktime: " << this->worktime << std::endl;
-    std::cout << "Extra hours: " << this->extraTime << std::endl;
-    std::cout << "Salary per hour: " << this->salary << std::endl;
-    std::cout << "Payment: " << this->payment << std::endl;
+  std::cout << std::endl;
+  std::cout << "Name: " << this->name << std::endl;
+  std::cout << "Id: " << this->id << std::endl;
+  std::cout << "Position: " << getStrPosition() << std::endl;
+  std::cout << "Main worktime: " << this->worktime << std::endl;
+  std::cout << "Extra hours: " << this->extraTime << std::endl;
+  std::cout << "Salary per hour: " << this->salary << std::endl;
+  std::cout << "Payment: " << this->payment << std::endl;
+  std::cout << std::endl;
 }
 
-Cleaner::Cleaner(int id, std::string name, Position pos, int wtime)
-    : Personal(id, name, pos, wtime) {
-    this->id = id;
-    this->name = name;
-    this->position = pos;
-    this->payment = 0;
-    this->worktime = wtime;
-    this->salary = 0;
+Cleaner::Cleaner(int id, std::string name, Position pos, int wtime, int salary)
+    : Personal(id, name, pos, wtime, salary) {
+  this->payment = 0;
 }
 
 void Cleaner::calc() {
-    this->payment = calcBase(this->salary, this->worktime) + calcBonus();
+  this->payment = calcBase(this->salary, this->worktime) + calcBonus();
 }
 
 int Cleaner::calcBonus() {
@@ -72,10 +55,12 @@ int Cleaner::calcBonus() {
 }
 
 void Cleaner::printinfo() {
+  std::cout << std::endl;
   std::cout << "Name: " << this->name << std::endl;
   std::cout << "Id: " << this->id << std::endl;
   std::cout << "Position: " << getStrPosition() << std::endl;
   std::cout << "Worktime: " << this->worktime << std::endl;
   std::cout << "Salary per hour: " << this->salary << std::endl;
   std::cout << "Payment: " << this->payment << std::endl;
+  std::cout << std::endl;
 }

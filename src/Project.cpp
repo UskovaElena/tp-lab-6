@@ -1,11 +1,13 @@
 // Copyright 2020 Uskova
 #include "Project.h"
 
+#include "Engineer.h"
+
 Project::Project(int id, std::string name, int budget) {
-    this->id = id;
-    this->name = name;
-    this->budget = budget;
-    this->workers = 0;
+  this->id = id;
+  this->name = name;
+  this->budget = budget;
+  this->workers = 0;
 }
 
 int Project::getId() {
@@ -29,5 +31,5 @@ std::string Project::getName() {
 }
 
 float Project::calcPart() {
-  return this->budget / this->workers;
+    return 1.0 / this->workers;
 }

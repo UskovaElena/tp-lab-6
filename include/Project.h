@@ -6,18 +6,19 @@
 
 class Project {
  private:
-    int id;
-    std::string name;
-    int budget;
-    int workers;
+  int id;
+  std::string name;
+  int budget;
+  int workers;
+
  public:
-    Project(int, std::string, int);
-    int getBudget();
-    int getId();
-    std::string getName();
-    int getWorkers();
-    void addWorker();
-    float calcPart();
+  Project(int, std::string, int);
+  int getBudget();
+  int getId();
+  std::string getName();
+  int getWorkers();
+  void addWorker();
+  float calcPart();
 };
 
 #endif  // INCLUDE_PROJECT_H_
