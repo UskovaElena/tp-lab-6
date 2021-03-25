@@ -23,6 +23,13 @@ int main() {
     workers[i]->calc();
     workers[i]->printinfo();
   }
+  std::cout << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
+  std::cout << "------------------------------------------------------------" << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
   Project* pr2 = new Project(656925, "MyPhone", 700000);
   for (int i = 0; i < workers.size(); i++) {
     if ((workers[i]->getPosition() == Position::ProjectManager ||

@@ -8,12 +8,8 @@
 #include <vector>
 
 #include "Employee.h"
-#include "Engineer.h"
-#include "Manager.h"
-#include "Personal.h"
+#include "Project.h"
 
-class Employee;       //mb ne nado
-class Project;
 
 std::vector<Employee*> readWorkers(std::string file, Project* proj);
 Employee* apdate(Employee* worker, Project* proj);

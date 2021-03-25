@@ -1,6 +1,8 @@
 // Copyright 2020 Uskova
 
 #include "Employee.h"
+#include "Factory.h"
+#include "Project.h"
 
 Employee::Employee(int id, std::string name, Position position, int worktime) {
   this->id = id;

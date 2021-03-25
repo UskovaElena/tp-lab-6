@@ -6,6 +6,9 @@
 #include <string>
 
 #include "Employee.h"
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
 
 std::vector<Employee*> readWorkers(std::string file_name, Project* project) {
   std::ifstream file;
@@ -74,23 +77,23 @@ std::vector<Employee*> readWorkers(std::string file_name, Project* project) {
 }
 
 Employee* apdate(Employee* data, Project* project) {
-  Employee* current;
+  Employee* current  = nullptr;
+  Tester* t0 = (Tester*)data;
+  Programmer* t1 = (Programmer*)data;
+  TeamLeader* t2 = (TeamLeader*)data;
   switch (data->getPosition()) {
     case Position::Tester:
-      Tester* t0 = (Tester*)data;
       current = new Tester(data->getId(), data->getName(), data->getPosition(),
                            data->getWorktime(), t0->getSalary(), t0->getCoef(),
                            project);
       break;
     case Position::Programmer: {
-      Programmer* t1 = (Programmer*)data;
       current = new Programmer(data->getId(), data->getName(),
                                data->getPosition(), data->getWorktime(),
                                t1->getSalary(), t1->getCoef(), project);
       break;
     }
     case Position::TeamLeader: {
-      TeamLeader* t2 = (TeamLeader*)data;
       current =
           new TeamLeader(data->getId(), data->getName(), data->getPosition(),
                          data->getWorktime(), t2->getSalary(), project);

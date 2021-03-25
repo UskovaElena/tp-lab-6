@@ -5,9 +5,6 @@
 #include <string>
 #include <vector>
 
-#include "Factory.h"
-#include "Project.h"
-
 enum class Position {
   Tester,          // 0
   Programmer,      // 1
@@ -17,6 +14,7 @@ enum class Position {
   Driver,          // 5
   Cleaner          // 6
 };
+
 
 class Employee {
  protected:

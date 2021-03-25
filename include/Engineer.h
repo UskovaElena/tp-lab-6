@@ -4,7 +4,6 @@
 
 #include <string>
 
-#include "Employee.h"
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Project.h"
@@ -57,4 +56,4 @@ class TeamLeader : public Programmer, public Heading {
   void addProject(Project*);
 };
 
-#endif  // INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H

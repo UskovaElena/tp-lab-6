@@ -1,5 +1,6 @@
 // Copyright 2020 Uskova
 
+#include "Employee.h"
 #include "Engineer.h"
 
 Engineer::Engineer(int id, std::string name, Position pos, int wtime,
@@ -17,9 +18,9 @@ int Engineer::calcBudgetPart(float part, int budget) {
 }
 
 void Engineer::calc() {
-  Employee::payment = calcBudgetPart(this->project->calcPart(),
+  this->payment = calcBudgetPart(this->project->calcPart(),
                                  0.6 * this->project->getBudget()) +
-                  calcBase(this->salary, Employee::worktime) + calcProAdditions();
+                  calcBase(this->salary, this->worktime) + calcProAdditions();
 }
 
 int Engineer::calcBonus() {
@@ -55,7 +56,7 @@ void Programmer::printinfo() {
   std::cout << "Position: " << getStrPosition() << std::endl;
   std::cout << "Progect: " << getProjectName() << std::endl;
   std::cout << "Worktime: " << getWorktime() << std::endl;
-  std::cout << "Salary per hour: " << getSalary() << std::endl;
+  std::cout << "Salary per hour: " << this->salary << std::endl;
   std::cout << "Bonus: " << calcProAdditions() << std::endl;
   std::cout << "Payment: " << getPayment() << std::endl;
   std::cout << std::endl;
@@ -81,8 +82,8 @@ void Tester::printinfo() {
   std::cout << "Id: " << getId() << std::endl;
   std::cout << "Position: " << getStrPosition() << std::endl;
   std::cout << "Progect: " << getProjectName() << std::endl;
-  std::cout << "Worktime: " << getWorktime() << std::endl;
-  std::cout << "Salary per hour: " << getSalary() << std::endl;
+  std::cout << "Worktime: " << this->worktime << std::endl;
+  std::cout << "Salary per hour: " << this->salary << std::endl;
   std::cout << "Bonus: " << calcProAdditions() << std::endl;
   std::cout << "Payment: " << getPayment() << std::endl;
   std::cout << std::endl;
@@ -97,10 +98,10 @@ int TeamLeader::calcHeads() {
 }
 
 void TeamLeader::calc() {
-  Employee::payment = (calcHeads() * 2000) +
+  this->payment = (calcHeads() * 2000) +
                   calcBudgetPart(this->project->calcPart(),
                                  this->project->getBudget() * 0.6) +
-                  calcBase(this->salary, Employee::worktime);
+                  calcBase(this->salary, this->worktime);
 }
 
 void TeamLeader::addProject(Project* pr) {
@@ -115,8 +116,8 @@ void TeamLeader::printinfo() {
   std::cout << "Progect: " << getProjectName() << std::endl;
   std::cout << "Number of workers in the project: "
             << this->project->getWorkers() << std::endl;
-  std::cout << "Worktime: " << getWorktime() << std::endl;
-  std::cout << "Salary per hour: " << getSalary() << std::endl;
+  std::cout << "Worktime: " << this->worktime << std::endl;
+  std::cout << "Salary per hour: " << this->salary << std::endl;
   std::cout << "Bonus: " << calcProAdditions() << std::endl;
   std::cout << "Payment: " << getPayment() << std::endl;
   std::cout << std::endl;
