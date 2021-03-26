@@ -8,7 +8,7 @@ Employee::Employee(int id, std::string name, Position position, int worktime) {
   this->id = id;
   this->name = name;
   this->position = position;
-  this->worktime = worktime;
+  this->worktime = worktime * 4;
   this->payment = 0;
 }
 

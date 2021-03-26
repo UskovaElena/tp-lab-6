@@ -57,6 +57,7 @@ TEST(Tests, Test6) {
     }
   }
   ProjectManager* emp = static_cast<ProjectManager*>(workers[7]);
+  emp->calc();
   EXPECT_EQ(345000, emp->getPayment());
 }
 
@@ -125,6 +126,7 @@ TEST(Tests, Test13) {
     }
   }
   SeniorManager* emp = static_cast<SeniorManager*>(workers[15]);
+  emp->calc();
   EXPECT_EQ(43527, emp->getPayment());
 }
 

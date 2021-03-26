@@ -30,7 +30,7 @@ std::vector<Employee*> readWorkers(std::string file_name, Project* project) {
     if (stoi(str_pos) == 0 || stoi(str_pos) == 1 || stoi(str_pos) == 2 ||
         stoi(str_pos) == 5 || stoi(str_pos) == 6) {
       getline(file, str_worktime, ';');
-      worktime = stoi(str_worktime) * 4;
+      worktime = stoi(str_worktime);
       getline(file, str_salary, ';');
       salary = stoi(str_salary);
       if (stoi(str_pos) == 0 || stoi(str_pos) == 1 || stoi(str_pos) == 5) {
