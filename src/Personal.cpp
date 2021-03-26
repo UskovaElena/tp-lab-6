@@ -29,6 +29,10 @@ void Driver::calc() {
   this->payment = (calcBase(this->salary, this->worktime) + calcBonus());
 }
 
+int Driver::getExtraTime() {
+    return this->extraTime;
+}
+
 void Driver::printinfo() {
   std::cout << std::endl;
   std::cout << "Name: " << this->name << std::endl;
