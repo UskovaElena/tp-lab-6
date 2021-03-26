@@ -6,6 +6,7 @@
 #include <fstream>
 #include <iostream>
 #include <vector>
+#include <string>
 
 #include "Employee.h"
 #include "Project.h"

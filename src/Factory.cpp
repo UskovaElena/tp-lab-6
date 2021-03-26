@@ -78,9 +78,9 @@ std::vector<Employee*> readWorkers(std::string file_name, Project* project) {
 
 Employee* apdate(Employee* data, Project* project) {
   Employee* current  = nullptr;
-  Tester* t0 = (Tester*)data;
-  Programmer* t1 = (Programmer*)data;
-  TeamLeader* t2 = (TeamLeader*)data;
+  Tester* t0 = static_cast<Tester*>(data);
+  Programmer* t1 = static_cast<Programmer*>(data);
+  TeamLeader* t2 = static_cast<TeamLeader*>(data);
   switch (data->getPosition()) {
     case Position::Tester:
       current = new Tester(data->getId(), data->getName(), data->getPosition(),

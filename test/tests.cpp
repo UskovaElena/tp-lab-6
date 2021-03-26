@@ -74,7 +74,8 @@ TEST(Tests, Test8) {
 TEST(Tests, Test9) {
   Project* pr = new Project{12214, 100000};
   Programmer* emp =
-      new Programmer(894515, "Anita West", Position::Programmer, 40, 400, 1, pr);
+      new Programmer(894515, "Anita West", Position::Programmer,
+          40, 400, 1, pr);
   EXPECT_EQ(6000, emp->calcProAdditions());
 }
 

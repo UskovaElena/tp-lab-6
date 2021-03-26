@@ -56,4 +56,4 @@ class TeamLeader : public Programmer, public Heading {
   void addProject(Project*);
 };
 
-#endif  // INCLUDE_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_
