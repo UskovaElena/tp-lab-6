@@ -33,7 +33,7 @@ int main() {
   Project* pr2 = new Project(656925, "MyPhone", 700000);
   for (int i = 0; i < workers.size(); i++) {
     if ((workers[i]->getPosition() == Position::ProjectManager ||
-         workers[i]->getPosition() == Position::SeniorManager ||
+        workers[i]->getPosition() == Position::SeniorManager ||
          workers[i]->getPosition() == Position::Programmer ||
          workers[i]->getPosition() == Position::Tester ||
          workers[i]->getPosition() == Position::TeamLeader) &&
