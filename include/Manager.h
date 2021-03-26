@@ -24,6 +24,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   void printinfo() override;
   int calcProAdditions() override;
   void setProject(Project*);
+  Project* getProject();
   std::string getProjectName();
 };
 

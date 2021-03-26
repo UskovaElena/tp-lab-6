@@ -19,6 +19,11 @@ void ProjectManager::setProject(Project* pr) {
     this->project = pr;
 }
 
+Project* ProjectManager::getProject() {
+    return this->project;
+}
+
+
 std::string ProjectManager::getProjectName() {
   return this->project->getName();
 }

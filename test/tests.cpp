@@ -85,7 +85,7 @@ TEST(Tests, Test10) {
   Cleaner* emp =
       new Cleaner(476528, "Vera Hernandez", Position::Cleaner, 38, 200);
   emp->setWorkTime(180);
-  emp->calc()
+  emp->calc();
   EXPECT_EQ(36000, emp->getPayment());
 }
 
