@@ -6,7 +6,7 @@
 #include "Engineer.h"
 #include "Factory.h"
 #include "Manager.h"
-#include "Project"
+#include "Project.h"
 
 
 TEST(Tests, Test1) {
