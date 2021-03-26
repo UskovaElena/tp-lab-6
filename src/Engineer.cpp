@@ -13,6 +13,10 @@ int Engineer::getSalary() {
     return this->salary;
 }
 
+Project* Engineer::getProject() {
+    return this->project;
+}
+
 int Engineer::calcBudgetPart(float part, int budget) {
     return budget * part;
 }

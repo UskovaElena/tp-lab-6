@@ -34,7 +34,7 @@ TEST(Tests, Test4) {
   Project* pr1 = new Project(656912, "SecretBox", 500000);
   Tester* emp =
       new Tester(687755, "April Nelson", Position::Tester, 40, 400, 0, pr1);
-  EXPECT_EQ(160, emp->getWorkTime());
+  EXPECT_EQ(160, emp->getWorktime());
 }
 
 TEST(Tests, Test5) {
@@ -56,14 +56,14 @@ TEST(Tests, Test6) {
       pr1->addWorker();
     }
   }
-  ProjectManager* emp = worker[7];
+  ProjectManager* emp = workers[7];
   EXPECT_EQ(345000, emp->getPayment());
 }
 
 
 TEST(Tests, Test7) {
   Cleaner* emp =
-      new Cleaner(214563, "Steve Tate", Position::Cleaner, 40, 200;);
+      new Cleaner(214563, "Steve Tate", Position::Cleaner, 40, 200);
   EXPECT_EQ(32000, emp->calc());
 }
 
@@ -93,7 +93,6 @@ TEST(Tests, Test11) {
   EXPECT_EQ("Mildred Jacob", emp->getName());
 }
 
-// --------------------------------------------------
 
 TEST(Tests, Test12) {
   Project* pr1 = new Project(656912, "SecretBox", 500000);
@@ -107,7 +106,7 @@ TEST(Tests, Test12) {
       pr1->addWorker();
     }
   }
-  ProjectManager* emp = worker[7];
+  ProjectManager* emp = workers[7];
   EXPECT_EQ("Lester Howard", emp->getName());
 }
 
@@ -123,7 +122,7 @@ TEST(Tests, Test13) {
       pr1->addWorker();
     }
   }
-  SeniorManager* emp = worker[15];
+  SeniorManager* emp = workers[15];
   EXPECT_EQ(43527, emp->getPayment());
 }
 
@@ -139,7 +138,7 @@ TEST(Tests, Test14) {
       pr1->addWorker();
     }
   }
-  SeniorManager* emp = worker[9];
+  SeniorManager* emp = workers[9];
   EXPECT_EQ(111, emp->calcWorkers());
 }
 

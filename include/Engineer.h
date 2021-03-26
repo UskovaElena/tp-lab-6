@@ -19,6 +19,7 @@ class Engineer : public Personal, public ProjectBudget {
   int calcBudgetPart(float, int) override;
   void calc() override;
   void setProject(Project* pr);
+  Project* getProject();
   std::string getProjectName();
   int calcBonus() override;
   virtual void printinfo() = 0;
