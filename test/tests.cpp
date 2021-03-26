@@ -1,12 +1,13 @@
 // Copyright 2020 Uskova
 
-#include "pch.h"
 #include <gtest/gtest.h>
 #include <string>
+#include "Personal.h"
 #include "Engineer.h"
 #include "Factory.h"
 #include "Manager.h"
-#include "Personal.h"
+#include "Project"
+
 
 TEST(Tests, Test1) {
   Project* pr1 = new Project(656912, "SecretBox", 500000);
